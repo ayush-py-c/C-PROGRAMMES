@@ -1,20 +1,22 @@
-//Question no. 6 - check for valid triangle
 #include<stdio.h>
-int main(int argc, char const *argv[])
+#include<math.h>
+int main()
 {
-    int a,b,c,s1,s2,s3;
-    printf("side1\nside2\nside3");
-    scanf("%d\n%d\n%d",&a,&b,&c);
-    s1 = a+b;
-    s2 = b+c;
-    s3 = c+a;
-    if (s1>a && s2>b && s1>c){
-        printf("trianlge is valid");
-
-    }
-    else{
-        printf("triangle is invalid");
-    }
-
-    return 0;
+	int i=1,n,x=1,j=0;
+	float s=0;
+	scanf("%d",&n);
+	while (i<=n)
+	{
+		j=1,x=1;
+		while (j<=(n-i+1))
+		{
+			x*=i;
+			j++;
+		}
+		//printf("%d\n",x);
+		s+=1.0/x;
+		i++;
+		//printf("%f\n",s);
+	}
+	printf("%f",s);
 }

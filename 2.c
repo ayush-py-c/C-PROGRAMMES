@@ -1,19 +1,14 @@
-//WAP to find the smallest number amoung the two numbers
 #include <stdio.h>
-int main(int argc, char const *argv[])
+int main()
 {
-    int a,b;
-    printf("Enter the first number :");
+    int a,i=1;
+    float s=0,fact=1;
     scanf("%d",&a);
-    printf("Enter the second number : ");
-    scanf("%d",&b);
-    if (a<b)
+    while (i<=a)
     {
-        printf("%d is the smallest no. amoung two",a);
-
+        fact*=i;
+        s+=fact/i;
+        i++;
     }
-    else{
-        printf("%d is the smallest no. amoung the two",b);
-    }
-    return 0;
+    printf("%f",s);
 }

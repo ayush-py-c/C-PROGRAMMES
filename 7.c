@@ -1,17 +1,19 @@
-//Question no. 7 - check real and imaginary nature for the given coefficients of quadratic equation
-#include<stdio.h>
-int main(int argc, char const *argv[])
-{
-    int a,b,c,d;
-    printf("a,b,c(ax^2+bx+c)");
-    scanf("%d%d%d",&a,&b,&c);
-    d=b*b-4*a*c;
-    if(d>0) {
-        printf("it is real root");
-    }
-    else{
-        printf("it is imaginary root");
-    }
+#include <stdio.h>
 
+int main() {
+    int n;
+    double sum = 0.0;
+    
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+    
+    int i = 1;
+    while (i <= n) {
+        sum += (double)(2 * i - 1) / (double)(2 * i);
+        i++;
+    }
+    
+    printf("Sum of the series is: %lf\n", sum);
+    
     return 0;
 }
