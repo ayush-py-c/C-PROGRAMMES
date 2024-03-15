@@ -1,19 +1,18 @@
 #include <stdio.h>
-
-int main() {
-    int n;
-    double sum = 0.0;
+int swap(int,int);
+int main(){
+	int r,x,y;
+    printf("Enter num1: ");
+	scanf("%d",&x);
+    printf("Enter num2: ");
+	scanf("%d",&y);
+    printf("Number before swap %d%d\n",x,y);
     
-    printf("Enter the value of n: ");
-    scanf("%d", &n);
-    
-    int i = 1;
-    while (i <= n) {
-        sum += (double)(2 * i - 1) / (double)(2 * i);
-        i++;
-    }
-    
-    printf("Sum of the series is: %lf\n", sum);
-    
-    return 0;
+    r = swap(x,y);
+	printf("Number after swap%d%d\n",r,x);
+	
+}
+int swap(int x,int y){
+	//int ;
+    return y ;
 }

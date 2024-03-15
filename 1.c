@@ -1,13 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
+typedef struct 
+
+{
+    char Name[20];
+    int Rollno;
+    int addno;
+    char psno[20];
+
+}d;
 int main()
 {
-	int i=1,n;
-	float s=0;
-	scanf("%d",&n);
-	while (i<=n)
-	{
-		s+=1/i;
-		i++;
-	}
-	printf("%f",s);
+    int a;
+    printf("%ld",sizeof(d));
+    return 0;
 }

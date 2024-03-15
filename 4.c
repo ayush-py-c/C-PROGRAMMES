@@ -1,18 +1,33 @@
 #include <stdio.h>
-int main(int argc, char const *argv[])
-{
-    int a,i=1;
-    float fact=1,j;
-    scanf("%d",&a);
-    // float k;
-    // float sum = 0,d;
-    while (i<=a)
-    {
-        fact=fact*i;
-        j+=i/fact;
-        
-        
-    }
-    printf("%f",j);
+
+
+union CarData {
+    char carName[50];
+    float price;
+};
+
+
+struct Car {
+    union CarData data;
+};
+
+int main() {
+    
+    struct Car myCar;
+
+    
+    printf("Enter the name of the car: ");
+    scanf("%s", myCar.data.carName);
+
+    
+    printf("Enter the price of the car: ");
+    scanf("%f", &myCar.data.price);
+
+    
+    printf("\nCar Information\n");
+    printf("Name: %s\n", myCar.data.carName);
+    printf("Price: %.2f\n", myCar.data.price);
+
     return 0;
 }
+ 

@@ -1,22 +1,18 @@
-#include<stdio.h>
-#include<math.h>
-int main()
-{
-	int i=1,n,x=1,j=0;
-	float s=0;
-	scanf("%d",&n);
-	while (i<=n)
-	{
-		j=1,x=1;
-		while (j<=(n-i+1))
-		{
-			x*=i;
-			j++;
-		}
-		//printf("%d\n",x);
-		s+=1.0/x;
-		i++;
-		//printf("%f\n",s);
-	}
-	printf("%f",s);
+#include <stdio.h>
+int swap(int,int);
+int main(){
+	int r,x,y;
+    printf("Enter num1: ");
+	scanf("%d",&x);
+    printf("Enter num2: ");
+	scanf("%d",&y);
+    printf("Number before swap %d%d\n",x,y);
+    
+    r = swap(x,y);
+	printf("Number after swap%d%d\n",r,x);
+	
+}
+int swap(int x,int y){
+	//int ;
+    return y ;
 }
